@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohakon <ohakon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 19:24:18 by ohakon            #+#    #+#             */
-/*   Updated: 2022/03/07 07:36:47 by ohakon           ###   ########.fr       */
+/*   Created: 2022/03/05 22:39:43 by ohakon            #+#    #+#             */
+/*   Updated: 2022/03/07 07:55:03 by ohakon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "so_long.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+int main()
 {
-	size_t	i;
+	char *str;
+	int fd;
 
-	if (dest == ((void *)0) || src == ((void *)0))
-		return (0);
-	i = 0;
-	while (*(src + i))
-	{
-		*(dest + i) = *(src + i);
-		i++;
-	}
-	*(dest + i) = '\0';
-	return (dest);
+	fd = open("./maps/map.ber", O_RDONLY);
+	if (fd < 0)
+		ft_errors("Error: cannot open file");
+	
+	gnl(fd, &str);
+	printf("%s", str);
+
+
+
 }

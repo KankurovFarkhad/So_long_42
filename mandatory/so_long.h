@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohakon <ohakon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 19:24:18 by ohakon            #+#    #+#             */
-/*   Updated: 2022/03/07 07:36:47 by ohakon           ###   ########.fr       */
+/*   Created: 2022/03/05 22:39:36 by ohakon            #+#    #+#             */
+/*   Updated: 2022/03/07 03:42:43 by ohakon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef SO_LONG_H
+# define SO_LONG_H
 
-char	*ft_strcpy(char *dest, const char *src)
+# include <stdio.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include "../libft/include/libft.h"
+
+typedef struct
 {
-	size_t	i;
+	int	size_y;
+	int	size_x;
+	int	playerpos_x;
+	int	playerpos_y;
+	int	score;
+	int	currentscore;
 
-	if (dest == ((void *)0) || src == ((void *)0))
-		return (0);
-	i = 0;
-	while (*(src + i))
-	{
-		*(dest + i) = *(src + i);
-		i++;
-	}
-	*(dest + i) = '\0';
-	return (dest);
-}
+
+}			t_mapdata;
+
+void	ft_errors(char *str);
+
+#endif
+
+

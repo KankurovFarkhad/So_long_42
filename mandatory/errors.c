@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohakon <ohakon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 19:24:18 by ohakon            #+#    #+#             */
-/*   Updated: 2022/03/07 07:36:47 by ohakon           ###   ########.fr       */
+/*   Created: 2022/03/07 02:43:53 by ohakon            #+#    #+#             */
+/*   Updated: 2022/03/07 02:43:54 by ohakon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "so_long.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void	ft_errors(char *str)
 {
-	size_t	i;
-
-	if (dest == ((void *)0) || src == ((void *)0))
-		return (0);
-	i = 0;
-	while (*(src + i))
-	{
-		*(dest + i) = *(src + i);
-		i++;
-	}
-	*(dest + i) = '\0';
-	return (dest);
+	write(2, str, 50);
+	ft_putstr_fd(str, 2);
+	exit(1);
 }

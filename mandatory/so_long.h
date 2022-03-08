@@ -6,7 +6,7 @@
 /*   By: ohakon <ohakon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 22:39:36 by ohakon            #+#    #+#             */
-/*   Updated: 2022/03/07 03:42:43 by ohakon           ###   ########.fr       */
+/*   Updated: 2022/03/08 09:36:22 by ohakon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,8 @@
 
 typedef struct
 {
-	int	size_y;
-	int	size_x;
-	int	playerpos_x;
-	int	playerpos_y;
-	int	score;
-	int	currentscore;
+	size_t linecounter;
+	size_t lenline;
 
 
 }			t_mapdata;

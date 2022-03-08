@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strvalid.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohakon <ohakon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 19:23:58 by ohakon            #+#    #+#             */
-/*   Updated: 2022/03/08 09:37:57 by ohakon           ###   ########.fr       */
+/*   Created: 2022/03/08 11:11:59 by ohakon            #+#    #+#             */
+/*   Updated: 2022/03/08 11:21:12 by ohakon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *s)
+char	*ft_strvalid(const char *s, int c)
 {
-	if (!s)
-		return ;
-	write(1, s, ft_strlen(s));
-	write(1, "\n", 2);
+	char	tmp_c;
+
+	tmp_c = (char)c;
+	while (*s)
+	{
+		if (*s != tmp_c)
+			return (NULL);
+		s++;
+	}
+	if (*s != tmp_c)
+		return ((char *)s);
+	return ((void *)0);
 }

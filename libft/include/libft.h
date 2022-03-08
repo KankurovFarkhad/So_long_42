@@ -6,7 +6,7 @@
 /*   By: ohakon <ohakon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 19:18:23 by ohakon            #+#    #+#             */
-/*   Updated: 2022/03/07 07:37:09 by ohakon           ###   ########.fr       */
+/*   Updated: 2022/03/08 11:21:26 by ohakon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strvalid(const char *s, int c);
 
 //to
 int		ft_atoi(const char *str);

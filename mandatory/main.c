@@ -26,7 +26,7 @@ int main()
 		ft_errors("Error: cannot open file\n");
 	i = 0;
 	f = 0;
-	while(gnl(fd, &str))
+	while((str = (get_next_line(fd))))
 	{
 		map_p->linecounter = ++i;
 		if (f == 0)
@@ -38,11 +38,12 @@ int main()
 		}
 		if(ft_strlen(str) != map_p->lenline)
 			ft_errors("Error: map isn't rectangle\n");
+		printf("%c", str[1]);
+		if(f == 1)
+		{
+			if(str[0] != 49 && (ft_strlen(str) - 1) != 49)
+				ft_errors("Error: the map is not surrounded by a fence\n");
+		}
 	}
-
-	// gnl(fd, &str);
-
-
-
-
 }
+	// gnl(fd, &str);

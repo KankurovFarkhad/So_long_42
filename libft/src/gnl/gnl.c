@@ -6,7 +6,7 @@
 /*   By: ohakon <ohakon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 19:17:38 by ohakon            #+#    #+#             */
-/*   Updated: 2022/03/09 05:14:30 by ohakon           ###   ########.fr       */
+/*   Updated: 2022/03/10 06:32:11 by ohakon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static char	*gnl_reminder(char *rem, char **line)
 {
 	char	*p_n;
-
 	p_n = ((void *)0);
 	if (*rem)
 	{
